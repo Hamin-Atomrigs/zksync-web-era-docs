@@ -772,8 +772,8 @@ dotenv.config();
 const DEPLOYER_PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY || "";
 
 export default async function (hre: HardhatRuntimeEnvironment) {
-  // @ts-ignore target zkSyncTestnet in config file which can be testnet or local
-  const provider = new Provider(hre.config.networks.zkSyncTestnet.url);
+  // @ts-ignore target zkSyncSepoliaTestnet in config file which can be testnet or local
+  const provider = new Provider(hre.config.networks.zkSyncSepoliaTestnet.url);
   const wallet = new Wallet(DEPLOYER_PRIVATE_KEY, provider);
   const deployer = new Deployer(hre, wallet);
   const factoryArtifact = await deployer.loadArtifact("AAFactory");
@@ -863,8 +863,8 @@ const ETH_ADDRESS = process.env.ETH_ADDRESS || "";
 const ACCOUNT_ADDRESS = process.env.DEPLOYED_ACCOUNT_ADDRESS || "";
 
 export default async function (hre: HardhatRuntimeEnvironment) {
-  // @ts-ignore target zkSyncTestnet in config file which can be testnet or local
-  const provider = new Provider(hre.config.networks.zkSyncTestnet.url);
+  // @ts-ignore target zkSyncSepoliaTestnet in config file which can be testnet or local
+  const provider = new Provider(hre.config.networks.zkSyncSepoliaTestnet.url);
 
   const owner = new Wallet(DEPLOYED_ACCOUNT_OWNER_PRIVATE_KEY, provider);
 
@@ -948,8 +948,8 @@ const ACCOUNT_ADDRESS = process.env.DEPLOYED_ACCOUNT_ADDRESS || "";
 const RECEIVER_ACCOUNT = process.env.RECEIVER_ACCOUNT || "";
 
 export default async function (hre: HardhatRuntimeEnvironment) {
-  // @ts-ignore target zkSyncTestnet in config file which can be testnet or local
-  const provider = new Provider(hre.config.networks.zkSyncTestnet.url);
+  // @ts-ignore target zkSyncSepoliaTestnet in config file which can be testnet or local
+  const provider = new Provider(hre.config.networks.zkSyncSepoliaTestnet.url);
 
   const owner = new Wallet(DEPLOYED_ACCOUNT_OWNER_PRIVATE_KEY, provider);
 
